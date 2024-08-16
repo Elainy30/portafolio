@@ -1,0 +1,759 @@
+html {
+  scroll-behavior: smooth; 
+}
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75); /* Fondo oscuro semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegura que el modal esté encima de otros elementos */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.modal-content img.modal-gif {
+  max-width: 150px; /* Asegura que el GIF no se salga del contenedor */
+  height: auto;
+  margin-bottom: 0.5rem; /* Espacio entre el GIF y el texto */
+}
+
+.modal-content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.modal-content button {
+  width: 200px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #555;
+}
+
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+  background-color: #e7dfd8;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+
+}
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; 
+  padding: 1rem;
+  position: sticky;
+  top: 0; 
+  background-color: #e7dfd8;  
+  z-index: 1000; 
+  padding: 10px;
+  border-radius: 0 0 15px 15px;
+}
+
+.logo {
+  width: 78px;
+  height: 78px;
+  padding-left: 20px;
+}
+
+nav {
+  flex: 1; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center 
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Estilo base para los enlaces en la navegación */
+nav ul li a {
+  color: #231f20; /* Color inicial del texto de los enlaces */
+  text-decoration: none; /* Quita el subrayado predeterminado */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transición para color y transformación */
+  position: relative; /* Para permitir el posicionamiento del pseudo-elemento */
+}
+
+/* Efecto de color y subrayado al pasar el cursor sobre el enlace */
+nav ul li a:hover {
+  color: #007bff; /* Cambia el color al pasar el cursor sobre el enlace */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño del enlace */
+}
+
+/* Pseudo-elemento para el subrayado animado */
+nav ul li a::after {
+  content: ""; /* Necesario para crear un pseudo-elemento */
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Posición del subrayado debajo del texto */
+  width: 100%;
+  height: 2px; /* Altura del subrayado */
+  background-color: #272727; /* Color del subrayado */
+  transform: scaleX(0); /* Inicialmente oculto (escala 0) */
+  transition: transform 0.3s ease; /* Transición para el subrayado */
+}
+
+/* Mostrar el subrayado al pasar el cursor */
+nav ul li a:hover::after {
+  transform: scaleX(1); /* Muestra el subrayado (escala 1) */
+}
+
+
+nav ul li a:hover {
+  color: #664c46; /* Color al pasar el cursor */
+}
+
+
+.profile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  background-color: #e7dfd8;
+}
+
+.profile-text h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.profile-text h2 {
+  font-size: 1.9rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.profile-text h3 {
+  font-size: 1.5rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.profile-text p {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+
+.profile-image img {
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  padding-right: 70px;
+}
+
+.social-links a {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.btn-cv {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e7dfd8;
+  background-color: #333;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none; /* Quita la subrayado del enlace */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-cv:hover {
+  background-color: #555; /* Cambia el color de fondo al pasar el cursor */
+  transform: scale(1.05); /* Agranda ligeramente el botón al pasar el cursor */
+}
+
+/* ESTILO DE PROJECTS*/ 
+.projects-section {
+  background-color: #231f20;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+.projects-section h2 {
+  color: #e7dfd8;
+}
+
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly; 
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #e7dfd8;
+  color: #333;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 280px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-18px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.project-card h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.demo-button, .repo-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.demo-button:hover, .repo-button:hover {
+  background-color: #555;
+}
+
+.more-projects-button {
+  margin: 35px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #e7dfd8;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer; 
+}
+
+.more-projects-button:hover {
+  background-color: #555;
+  color: #e7dfd8;
+}
+
+/* Estilo de Skills */
+
+.skills-section {
+  background-color: #231f20 ;
+  text-align: center;
+  padding: 2rem;
+  max-width: 100%;
+  margin: 2rem auto;
+  
+}
+.skills-section h2 {
+ color: #e7dfd8;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@keyframes scaleUpDown {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  padding: 2rem;
+  animation: scaleUpDown 4s infinite; 
+}
+
+
+.skill svg {
+  font-size: 2rem;
+  color: #e7dfd8;
+  transition: transform 0.3s ease; /* Animación de escala */
+}
+
+.skill svg:hover {
+  transform: scale(1.2); /* Escalar al pasar el cursor */
+}
+
+.skill span {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #e7dfd8;
+}
+
+/*Estilos Formacion */ 
+.edu-section {
+  padding: 30px;
+}
+.education-card {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ocupa toda la altura disponible */
+  min-height: 300px; /* Establece una altura mínima para las tarjetas */
+  max-width: 80%; /* Ajusta el ancho máximo de las tarjetas */
+  margin: 3rem auto; /* Centra las tarjetas en el carrusel */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.education-card img {
+  max-width: 400px; /* Asegura que la imagen no se salga del contenedor */
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px; /* Espacio entre la imagen y el título */
+}
+
+.education-card h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.education-card p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.education-date {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.875rem;
+  color: #999;
+}
+
+/* Estilo Contacto */ 
+.contact-form-section {
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 80%;
+  margin: 2rem auto;
+}
+
+.contact-form-section h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-logo {
+  flex: 0 0 150px; /* Fija el ancho del logo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-logo img {
+  max-width: 400px; /* Asegura que la imagen se ajuste al contenedor */
+  height: auto;
+  border-radius: 10px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1; /* Asegura que el formulario ocupe el espacio restante */
+}
+
+.contact-form label {
+  font-size: 1rem;
+  color: #333;
+ font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgba(51, 49, 49, 0.7); /* Borde blanco semi-transparente */
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo ligeramente transparente */
+  color: #666; /* Texto en blanco */
+  outline: none; /* Quita la línea de borde al recibir foco */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus
+.contact-form input:not(:placeholder-shown), 
+.contact-form textarea:valid{
+  background-color: rgba(255, 255, 255, 0.2); 
+  outline: none; 
+}
+
+
+.contact-form button {
+  width: 300px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e7dfd8;
+  background-color: #333;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: center; /* Alinea el botón al centro del formulario */
+}
+
+.contact-form button:hover {
+  background-color: #555; /* Cambia el color de fondo en el estado hover */
+  transform: scale(1.05); /* Agranda ligeramente el botón al pasar el cursor */
+}
+
+ /* Footer*/
+ .footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333; /* Color de fondo del footer */
+  color: #ffffff; /* Color del texto */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.copyright {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+}
+/* Media Queries */
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column; /* Cambia la dirección del flex para apilar los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    font-size: small; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem; /* Espacio entre el logo y los enlaces */
+  }
+
+  nav {
+    width: 100%; /* Asegura que el nav ocupe todo el ancho disponible */
+    display: flex;
+    flex-direction: column; /* Apila los enlaces verticalmente */
+    align-items: center; /* Centra los enlaces horizontalmente */
+  }
+
+  nav ul {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    display: block; /* Asegura que los enlaces ocupen todo el ancho disponible */
+  }
+
+  nav ul li a {
+    display: block; /* Hace que los enlaces ocupen todo el ancho disponible */
+    padding: 0.5rem; /* Ajusta el padding de los enlaces */
+    color: #231f20; /* Color del texto de los enlaces */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+  }
+
+
+  .profile {
+    flex-direction: column-reverse;
+    align-items: stretch; /* Centra el contenido */
+  }
+
+  .profile-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .profile-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .profile-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .profile-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .social-links {
+    padding: 1rem;
+    padding-right: 0;
+    flex-direction: row;
+  }
+
+  .btn-cv {
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .more-projects-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .skills-section {
+    padding: 1rem;
+  }
+
+  .skills-container {
+    flex-direction: row;
+  }
+
+  .skill {
+    width: 60px;
+    padding: 1rem;
+  }
+  .education-card img {
+    max-width: 87%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-logo img {
+    max-width: 300px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .footer {
+    font-size: 0.875rem;
+  }
+
+  .modal-content {
+    width: 50%;
+}
+}
+
+
+/* Para pantallas medianas (tabletas) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .modal-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .modal-content h2 {
+    font-size: 1.7rem;
+  }
+
+  .modal-content img.modal-gif {
+    max-width: 130px;
+  }
+
+  .modal-content p {
+    font-size: 0.9rem;
+  }
+
+  .modal-content button {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+
+  .profile-text h1 {
+    font-size: 3rem;
+  }
+
+  .profile-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .profile-text h3 {
+    font-size: 1.4rem;
+  }
+
+  .profile-image img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .btn-cv {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.75rem;
+  }
+
+  .projects-container {
+    flex-direction: row;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .more-projects-button {
+    padding: 1rem 1.75rem;
+    font-size: 0.9rem;
+  }
+
+  .skills-section {
+    padding: 1.5rem;
+  }
+
+  .skills-container {
+    flex-direction: row;
+  }
+
+  .skill {
+    width: 80px;
+    padding: 1.5rem;
+  }
+
+  .contact-container {
+    flex-direction: row;
+  }
+
+  .contact-logo img {
+    max-width: 350px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .footer {
+    font-size: 1rem;
+  }
+}
