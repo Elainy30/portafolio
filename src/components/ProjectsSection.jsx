@@ -48,7 +48,7 @@ const ProjectsSection = () => {
           href="https://github.com/Elainy30?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-cv"
+          className="btn-pj"
         >
            VER MAS PROYECTOS
         </a>

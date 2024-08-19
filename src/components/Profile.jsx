@@ -22,7 +22,7 @@ const Profile = () => {
           avanzar en mi camino en la tecnología.
         </p>
         <a
-          href="https://docs.google.com/document/d/17dDScWvt6jFmp9Lrrqoosw2ZJ2j09Uq7QG1QJ7NcMaI/edit?usp=sharing"
+          href="https://drive.google.com/file/d/1T73hEpO82WsBkTRZhw2O-DwD8XoIuGFB/view"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-cv"

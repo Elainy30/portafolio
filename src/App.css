@@ -8,11 +8,11 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75); /* Fondo oscuro semitransparente */
+  background-color: rgba(0, 0, 0, 0.75); 
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Asegura que el modal esté encima de otros elementos */
+  z-index: 1000; 
 }
 
 .modal-content {
@@ -229,7 +229,6 @@ nav ul li a:hover {
 /* ESTILO DE PROJECTS*/ 
 .projects-section {
   background-color: #231f20;
-  width: 100%;
   text-align: center;
   padding: 2rem;
 }
@@ -310,6 +309,22 @@ nav ul li a:hover {
   background-color: #555;
   color: #e7dfd8;
 }
+.btn-pj {
+  margin: 25px;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e7dfd8;
+  background-color: #333;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none; /* Quita la subrayado del enlace */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
 
 /* Estilo de Skills */
 
@@ -380,10 +395,9 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Ocupa toda la altura disponible */
-  min-height: 300px; /* Establece una altura mínima para las tarjetas */
-  max-width: 80%; /* Ajusta el ancho máximo de las tarjetas */
-  margin: 3rem auto; /* Centra las tarjetas en el carrusel */
+  height: 100%; 
+  max-width: 80%; 
+  margin: 3rem auto; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   
 }
@@ -526,7 +540,10 @@ nav ul li a:hover {
     align-items: center; /* Centra los elementos horizontalmente */
     font-size: small; /* Ajusta el tamaño de fuente para pantallas pequeñas */
   }
-
+  body {
+    overflow-x: hidden;
+  }
+  
   .logo {
     width: 60px;
     height: 60px;
@@ -548,7 +565,7 @@ nav ul li a:hover {
     font-weight: bold;
     width: 100%;
     text-align: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   nav ul li {
@@ -556,6 +573,7 @@ nav ul li a:hover {
   }
 
   nav ul li a {
+    font-size: 9px;
     display: block; /* Hace que los enlaces ocupen todo el ancho disponible */
     padding: 0.5rem; /* Ajusta el padding de los enlaces */
     color: #231f20; /* Color del texto de los enlaces */
@@ -565,7 +583,7 @@ nav ul li a:hover {
 
   .profile {
     flex-direction: column-reverse;
-    align-items: stretch; /* Centra el contenido */
+    align-items: center; 
   }
 
   .profile-text h1 {
@@ -602,7 +620,6 @@ nav ul li a:hover {
   }
 
   .project-card {
-    width: 100%;
     max-width: 350px;
   }
 
