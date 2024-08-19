@@ -50,7 +50,7 @@ const ProjectsSection = () => {
           rel="noopener noreferrer"
           className="btn-cv"
         >
-          VER CV ACTUALIZADO
+           VER MAS PROYECTOS
         </a>
     </section>
   );
