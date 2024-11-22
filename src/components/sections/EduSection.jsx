@@ -1,10 +1,10 @@
 import React from 'react';
-import EducationCard from './EducationCard';
+import EducationCard from '../features/EducationCard';
 import Slider from 'react-slick';
-import education01 from '../assets/digitalMujer.png';
-import education02 from '../assets/unicaribe-logo.png';
-import education03 from '../assets/aluraoracle.png';
-import education04 from '../assets/udemy.png';
+import education01 from '../../assets/logos/digitalMujer.png';
+import education02 from '../../assets/logos/unicaribe-logo.png';
+import education03 from '../../assets/logos/aluraoracle.png';
+import education04 from '../../assets/logos/udemy.png';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 

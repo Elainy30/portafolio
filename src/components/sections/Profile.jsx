@@ -1,5 +1,5 @@
 import React from 'react';
-import profilePic from '../assets/profile-pic.png'; 
+import profilePic from '../../assets/images/profile-pic.png';  
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 const Profile = () => {
@@ -23,7 +23,7 @@ const Profile = () => {
         Mi enfoque es escribir código limpio y eficiente, siempre buscando mejorar y aprender nuevas tecnologías.
         </p>
         <a
-          href="https://drive.google.com/file/d/1T73hEpO82WsBkTRZhw2O-DwD8XoIuGFB/view"
+          href="https://www.canva.com/design/DAFhVSHYQvM/iQj2B-Nzs1TDt0b7FP-1qA/edit?utm_content=DAFhVSHYQvM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-cv"

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ReactModal from 'react-modal';
-import gif from '../assets/modal.gif'; // Asegúrate de usar la ruta correcta a tu GIF
+import gif from '../../assets/gifs/modal.gif'; 
 
 ReactModal.setAppElement('#root'); // Asegura la accesibilidad para lectores de pantalla
 

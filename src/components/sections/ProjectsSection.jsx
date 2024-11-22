@@ -1,8 +1,8 @@
 import React from 'react';
-import ProjectCard from './ProjectCard';
-import projects01 from '../assets/projects01.png';
-import projects02 from '../assets/projects02.png';
-import projects04 from '../assets/projects04.png';
+import ProjectCard from '../features/ProjectCard';
+import projects01 from '../../assets/images/projects01.png';
+import projects02 from '../../assets/images/projects02.png';
+import projects04 from '../../assets/images/projects04.png';
 
 const ProjectsSection = () => {
   const projects = [

@@ -1,18 +1,11 @@
 import React from 'react';
-import Header from './components/Header';
-import Profile from './components/Profile';
 import './App.css'; 
-import ProjectsSection from './components/ProjectsSection';
-import SkillsSection from './components/SkillsSection';
-import EduSection from './components/EduSection';
-import ContactForm from './components/ContactForm';
-import Modal from './components/Modal';
-import Footer from './components/Footer';
+import { Header, Footer, Profile, ProjectsSection, EduSection, SkillsSection, ContactForm, Modal } from './index';
 
 const App = () => {
   return (
     <div className="app">
-      <Header />
+      <Header/>
       <Modal/>
       <main >
         <Profile/>

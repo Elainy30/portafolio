@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
-import logo from '../assets/contact.png';  
+import logo from '../../assets/logos/contact.png';  
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
